@@ -7,6 +7,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .marquee {
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-content {
+      display: flex;
+      animation: scroll-left 30s linear infinite;
+    }
+    .marquee .card.project {
+      min-width: 300px;
+      margin-right: 20px;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -49,15 +67,34 @@
 
   <section class="projects container" data-aos="fade-up">
     <h2>Featured Projects</h2>
-    <div class="card project">
-      <h3>Planet French</h3>
-      <p>Educational platform developed using WordPress. Designed and developed collaboratively with modern UI and responsiveness.</p>
-      <a href="https://planetfrench.com" target="_blank">Visit Site</a>
-    </div>
-    <div class="card project">
-      <h3>Perhoops</h3>
-      <p>A modern pet store website built using WordPress for an engaging shopping experience.</p>
-      <a href="#">Visit Site</a>
+    <div class="marquee">
+      <div class="marquee-content">
+        <div class="card project">
+          <h3>Planet French</h3>
+          <p>Educational platform developed using WordPress. Designed and developed collaboratively with modern UI and responsiveness.</p>
+          <a href="https://planetfrench.com" target="_blank">Visit Site</a>
+        </div>
+        <div class="card project">
+          <h3>Perhoops</h3>
+          <p>A modern pet store website built using WordPress for an engaging shopping experience.</p>
+          <a href="#">Visit Site</a>
+        </div>
+        <div class="card project">
+          <h3>MyPortfolio</h3>
+          <p>A sleek personal portfolio created to showcase web and game dev skills using HTML, CSS, and animations.</p>
+          <a href="#">Visit Site</a>
+        </div>
+        <div class="card project">
+          <h3>Real Estate Web</h3>
+          <p>Responsive WordPress real estate website with listing filters and interactive maps.</p>
+          <a href="#">Visit Site</a>
+        </div>
+        <div class="card project">
+          <h3>Unity Runner Game</h3>
+          <p>Endless runner mobile game made with Unity and C#. Available on Android.</p>
+          <a href="#">Play Now</a>
+        </div>
+      </div>
     </div>
   </section>
 
